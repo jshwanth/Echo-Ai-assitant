@@ -5,7 +5,7 @@ import requests
 import musicLibrary  
 from openai import OpenAI
 
-API_KEY = '{Api_key}'
+# API_KEY = '{Api_key}'
 
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
@@ -15,7 +15,7 @@ def speak(text):
     engine.runAndWait()
 
 def aiProcess(command):
-    client = OpenAI(api_key= "sk-proj-ZmKUnFJyjAMfHr9cCzcfT3BlbkFJrzNAwqDWkHfG87Ma0PIM",
+    client = OpenAI(api_key= "{api_key}",
     )
     completion = client.chat.completions.create(
     model="gpt-3.5-turbo",
